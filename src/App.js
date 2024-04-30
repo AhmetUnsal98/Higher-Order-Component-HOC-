@@ -1,5 +1,5 @@
-import CounterDecrease from "./CounterDecrease";
-import CounterIncrease from "./CounterIncrease";
+import CounterIncreaseHover from "./CounterIncreaseHover";
+import CounterIncreaseClick from "./CounterIncreaseClick";
 
 function App() {
   return (
@@ -12,8 +12,8 @@ function App() {
       }}
       className="App"
     >
-      <CounterIncrease name={"Increase Prop"} />
-      <CounterDecrease name={"Decrease Prop"} />
+      <CounterIncreaseClick />
+      <CounterIncreaseHover />
     </div>
   );
 }

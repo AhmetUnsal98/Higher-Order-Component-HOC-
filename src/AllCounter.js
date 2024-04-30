@@ -1,24 +1,15 @@
 import React, { useState } from "react";
 
 const AllCounter = (WrappedComponent) => {
-  const NewCounterComponent = (props) => {
+  const NewCounterComponent = () => {
     const [counter, setCounter] = useState(0);
 
     const increaseCounter = () => {
       setCounter(counter + 1);
     };
 
-    const decreaseCounter = () => {
-      setCounter(counter - 1);
-    };
-
     return (
-      <WrappedComponent
-        counter={counter}
-        increaseCounter={increaseCounter}
-        decreaseCounter={decreaseCounter}
-        {...props}
-      />
+      <WrappedComponent counter={counter} increaseCounter={increaseCounter} />
     );
   };
 
